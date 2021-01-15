@@ -19,7 +19,7 @@ Solution: Check using its serial number. <br />
 <br />
 <br />
 <br />
-##For possibly-patched switches
+## For possibly-patched switches
 [\[gbatemp.net\] A definitive way to test if your Switch is patched or not (purchases after 07-2018)](https://gbatemp.net/threads/512018/)
 ## References
 [Is My Switch Patched?](https://ismyswitchpatched.com/)
