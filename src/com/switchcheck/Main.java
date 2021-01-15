@@ -2,11 +2,15 @@ package com.switchcheck;
 
 import java.util.Scanner;
 
+/**
+ * The main class.
+ * Has attribute ["input"].
+ */
 public class Main {
     public static int input;
 
     /**
-     * This is just for restarting inputs
+     * This is just for restarting for wrong inputs
      */
     public static void startPick(){
         Scanner scan = new Scanner(System.in);
@@ -22,8 +26,11 @@ public class Main {
     }
 
     /**
-     * @param i This accepts 1, 2,then every other int
-     * @return This return statement is for testing
+     * This picks between 3 options
+     * each option uses a different design pattern
+     *
+     * @param i This accepts [1, 2, then every other int]
+     * @return This return statement is just for testing
      */
     public static String pick(int i) {
         if (i == 1) {
@@ -41,6 +48,11 @@ public class Main {
         }
     }
 
+    /**
+     * Asks the user for the Switch Unit's Serial Number
+     *
+     * @return returns the serial number
+     */
     public static String serialInput() {
         Scanner scan = new Scanner(System.in);
         System.out.println("Find your system's serial number at the bottom of the device");
@@ -65,14 +77,14 @@ public class Main {
     }
 
     /**
-     * This is the Main Method
+     * This is the Main Method.
+     * This shows the user 3 options, then calls startpick() to start asking the user to choose.
      * @param args (the usual)
      */
     public static void main(String[] args) {
         System.out.println("====================================");
         System.out.println("= = =Switch Serial Checker Tool= = =");
         System.out.println("====================================");
-
         System.out.println("====================================");
         System.out.println("        Pick one from the 3:        ");
         System.out.println("====================================");
