@@ -2,8 +2,8 @@
 A CMSC 22 Java Project
 
 My Hobby/Interest: Console Modding/Jailbreaking <br />
-Problem: Can I hack my nintendo switch? <br />
-Solution: Check how using its serial number. <br />
+Problem: Can I "hack" my nintendo switch? <br />
+Solution: Check using its serial number. <br />
 <br />
 <br />
 <br />
