@@ -1,6 +1,10 @@
 package com.switchcheck.SerialModelState;
 
-public class EristaState implements State {
+/**
+ * A concrete class implementing State interface
+ * (sets Origin state to 'Erista')
+ */
+public class EristaState implements StateInterface {
     public void doAction(SwitchContext context){
         System.out.println("Version set to Erista state");
         context.setVersionState(this);

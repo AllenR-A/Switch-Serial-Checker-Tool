@@ -1,6 +1,6 @@
 package com.switchcheck;
 
-import com.switchcheck.SerialPatchFactory.SwitchF;
+import com.switchcheck.SerialPatchFactory.SwitchFactoryInterface;
 import com.switchcheck.SerialPatchFactory.SwitchFactory;
 
 import static com.switchcheck.EristaPatchCheck.patchCheck;
@@ -19,29 +19,31 @@ public class SerialFactory {
         SwitchFactory switchFactory = new SwitchFactory();
         String assemblyLine = serial.substring(2,5);
         String number = serial.substring(5);
+        //These need to trigger first (since K, J, & 9 could be seen first -if they appear- in the serial number)
         if(serial.charAt(1) == 'K') {
-            SwitchF switch1 = switchFactory.getSwitch("Mariko-Patched");
+            SwitchFactoryInterface switch1 = switchFactory.getSwitch("Mariko-Patched");
             return switch1.inform();
         } else if(serial.charAt(1) == 'J') {
-            SwitchF switch1 = switchFactory.getSwitch("MarikoLite-Patched");
+            SwitchFactoryInterface switch1 = switchFactory.getSwitch("MarikoLite-Patched");
             return switch1.inform();
         } else if (serial.charAt(3) == '9') {
-            SwitchF switch1 = switchFactory.getSwitch("Refurbished-Maybe");
+            SwitchFactoryInterface switch1 = switchFactory.getSwitch("Refurbished-Maybe");
             return switch1.inform();
-        } else if(patchCheck(assemblyLine, number).equals("Unpatched")){
-            SwitchF switch1 = switchFactory.getSwitch("Erista-Unpatched");
+        }
+        //These need to trigger last (uses EristaPatchCheck.patchCheck() method)
+          else if(patchCheck(assemblyLine, number).equals("Unpatched")){
+            SwitchFactoryInterface switch1 = switchFactory.getSwitch("Erista-Unpatched");
             return switch1.inform();
         } else if(patchCheck(assemblyLine, number).equals("Maybe")) {
-            SwitchF switch1 = switchFactory.getSwitch("Erista-Maybe");
+            SwitchFactoryInterface switch1 = switchFactory.getSwitch("Erista-Maybe");
             return switch1.inform();
         } else if(patchCheck(assemblyLine, number).equals("Korean")) {
-            SwitchF switch1 = switchFactory.getSwitch("EristaK-Maybe");
+            SwitchFactoryInterface switch1 = switchFactory.getSwitch("EristaK-Maybe");
             return switch1.inform();
         } else if(patchCheck(assemblyLine, number).equals("Patched")) {
-            SwitchF switch1 = switchFactory.getSwitch("Erista-Patched");
+            SwitchFactoryInterface switch1 = switchFactory.getSwitch("Erista-Patched");
             return switch1.inform();
         }
         return "";
     }
-
 }

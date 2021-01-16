@@ -3,24 +3,21 @@ package com.switchcheck.SerialPatchFactory;
 /**
  * switchModel doesn't need to "ignore case" since
  * the Strings would be pre-defined already.
+ *
+ * This Factory would generate objects
+ * (the models & whether they're patched or not)
  */
 public class SwitchFactory {
-    public SwitchF getSwitch(String switchModel){
-        if (switchModel.equals("Erista-Unpatched")){
-            return new UnpatchedErista_v1();
-        } else if (switchModel.equals("Erista-Maybe")){
-            return new MightBePatchedErista_v1();
-        } else if (switchModel.equals("EristaK-Maybe")){
-            return new MightBePatchedEristaK_v1();
-        } else if (switchModel.equals("Erista-Patched")){
-            return new PatchedErista_v1();
-        } else if (switchModel.equals("Refurbished-Maybe")){
-            return new Refurbished_v1();
-        } else if (switchModel.equals("Mariko-Patched")){
-            return new PatchedMariko_v2();
-        } else if (switchModel.equals("MarikoLite-Patched")){
-            return new PatchedMarikoLite_v2();
-        }
-        return new dummySwitch();
+    public SwitchFactoryInterface getSwitch(String switchModel){
+        return switch (switchModel) {
+            case "Erista-Unpatched" -> new UnpatchedErista_v1();
+            case "Erista-Maybe" -> new MightBePatchedErista_v1();
+            case "EristaK-Maybe" -> new MightBePatchedEristaK_v1();
+            case "Erista-Patched" -> new PatchedErista_v1();
+            case "Refurbished-Maybe" -> new Refurbished_v1();
+            case "Mariko-Patched" -> new PatchedMariko_v2();
+            case "MarikoLite-Patched" -> new PatchedMarikoLite_v2();
+            default -> new DummySwitch();
+        };
     }
 }

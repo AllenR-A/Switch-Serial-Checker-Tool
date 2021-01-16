@@ -3,16 +3,20 @@ package com.switchcheck.SerialInformationComposite;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SwitchComposite implements SwitchC{
+/**
+ * The Composite in Composite Pattern Design
+ * (the one adding, removing leaves)
+ */
+public class SwitchComposite implements SwitchCompositeInterface {
 
-    List<SwitchC> switchUnits = new ArrayList<>();
+    List<SwitchCompositeInterface> switchUnits = new ArrayList<>();
 
     /**
      * Add a switchUnit to the switchUnits List
      * @param switchUnit The switch unit | e.g. erista, mariko, etc.
      */
     @Override
-    public void add(SwitchC switchUnit){
+    public void add(SwitchCompositeInterface switchUnit){
         switchUnits.add(switchUnit);
     }
 
@@ -21,7 +25,7 @@ public class SwitchComposite implements SwitchC{
      * @param switchUnit The switch unit | e.g. erista, mariko, etc.
      */
     @Override
-    public void remove(SwitchC switchUnit){
+    public void remove(SwitchCompositeInterface switchUnit){
         switchUnits.remove(switchUnit);
     }
 
@@ -30,7 +34,7 @@ public class SwitchComposite implements SwitchC{
      * @param i The index of a switchUnit in the list
      */
     @Override
-    public SwitchC getChild(int i){
+    public SwitchCompositeInterface getChild(int i){
         return switchUnits.get(i);
     }
 
@@ -65,16 +69,16 @@ public class SwitchComposite implements SwitchC{
     }
 
     @Override   //Not really applicable since this class isn't supposed to return this.
-    public boolean getRefurb(){
+    public boolean getRefurbished(){
        return false;
     }
 
-    @Override
+    @Override   //Prints a message + the unit in the switchUnits List
     public void print(){
         System.out.println("Your Unit");
         System.out.println("=========================================================");
 
-        for (SwitchC switchUnit : switchUnits) {
+        for (SwitchCompositeInterface switchUnit : switchUnits) {
             switchUnit.print();
         }
     }

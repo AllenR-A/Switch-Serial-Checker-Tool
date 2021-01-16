@@ -1,6 +1,10 @@
 package com.switchcheck.SerialModelState;
 
-public class MarikoState implements State {
+/**
+ * A concrete class implementing State interface
+ * (sets Origin state to 'Mariko')
+ */
+public class MarikoState implements StateInterface {
     public void doAction(SwitchContext context){
         System.out.println("(Version set to 'Mariko' state)");
         context.setVersionState(this);

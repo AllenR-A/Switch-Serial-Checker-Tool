@@ -1,6 +1,12 @@
 package com.switchcheck.SerialPatchFactory;
 
-public class PatchedErista_v1 implements SwitchF {
+/**
+ * This is the Patched Erista (v1) object
+ */
+public class PatchedErista_v1 implements SwitchFactoryInterface {
+    /**
+     * @return a text block of information
+     */
     public String inform(){
         return """
                 

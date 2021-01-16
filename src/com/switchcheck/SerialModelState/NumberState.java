@@ -2,7 +2,11 @@ package com.switchcheck.SerialModelState;
 
 import com.switchcheck.SerialState;
 
-public class NumberState implements State {
+/**
+ * A concrete class implementing State interface
+ * (sets Number state to the input)
+ */
+public class NumberState implements StateInterface {
     String string = SerialState.numberState;
 
     public void doAction(SwitchContext context){

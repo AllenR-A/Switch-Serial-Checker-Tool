@@ -1,12 +1,17 @@
 package com.switchcheck.SerialModelState;
 
+/**
+ * The 'Context' in State Pattern Design
+ * which uses the State interface to set/get
+ * it's 6 attributes, which is then printed by the SerialState class
+ */
 public class SwitchContext {
-    private State version;
-    private State origin;
-    private State serialNumber;
-    private State assemblyLine;
-    private State number;
-    private State refurbished;
+    private StateInterface version;
+    private StateInterface origin;
+    private StateInterface serialNumber;
+    private StateInterface assemblyLine;
+    private StateInterface number;
+    private StateInterface refurbished;
 
     public SwitchContext(){
         version = null;
@@ -17,51 +22,51 @@ public class SwitchContext {
         refurbished = null;
     }
 
-    public void setVersionState(State version) {
+    public void setVersionState(StateInterface version) {
         this.version = version;
     }
 
-    public State getVersionState() {
+    public StateInterface getVersionState() {
         return version;
     }
 
-    public void setOriginState(State origin) {
+    public void setOriginState(StateInterface origin) {
         this.origin = origin;
     }
 
-    public State getOriginState() {
+    public StateInterface getOriginState() {
         return origin;
     }
 
-    public void setSerialNumberState(State serialNumber) {
+    public void setSerialNumberState(StateInterface serialNumber) {
         this.serialNumber = serialNumber;
     }
 
-    public State getSerialNumberState() {
+    public StateInterface getSerialNumberState() {
         return serialNumber;
     }
 
-    public void setAssemblyLineState(State assemblyLine) {
+    public void setAssemblyLineState(StateInterface assemblyLine) {
         this.assemblyLine = assemblyLine;
     }
 
-    public State getAssemblyLineState() {
+    public StateInterface getAssemblyLineState() {
         return assemblyLine;
     }
 
-    public void setNumberState(State number) {
+    public void setNumberState(StateInterface number) {
         this.number = number;
     }
 
-    public State getNumberState() {
+    public StateInterface getNumberState() {
         return number;
     }
 
-    public void setRefurbishedState(State refurbished) {
+    public void setRefurbishedState(StateInterface refurbished) {
         this.refurbished = refurbished;
     }
 
-    public State getRefurbishedState() {
+    public StateInterface getRefurbishedState() {
         return refurbished;
     }
 }

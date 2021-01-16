@@ -1,7 +1,13 @@
 package com.switchcheck.SerialInformationComposite;
+
 import com.switchcheck.EristaPatchCheck;
 
-public class Erista_v1 implements SwitchC {
+/**
+ * A Leaf Node in Composite Pattern Design
+ * where each leaf is a type of Switch.
+ * (has 5 attributes set with a constructor)
+ */
+public class Erista_v1 implements SwitchCompositeInterface {
     String version;
     String origin;
     String assemblyLine;
@@ -16,42 +22,40 @@ public class Erista_v1 implements SwitchC {
         this.serialNumber = serialNumber;
     }
 
-    @Override
-    public void add(SwitchC switchUnit){
-        //Nothing here since this is a leaf node
+    @Override   //Nothing here since this is a leaf node
+    public void add(SwitchCompositeInterface switchUnit){
     }
 
-    @Override
-    public void remove(SwitchC switchUnit){
-        //Nothing here since this is a leaf node
+    @Override   //Nothing here since this is a leaf node
+    public void remove(SwitchCompositeInterface switchUnit){
     }
 
-    @Override
-    public SwitchC getChild(int i){
-        return null;   //Null since this is a leaf node
+    @Override   //Null since this is a leaf node
+    public SwitchCompositeInterface getChild(int i){
+        return null;
     }
 
-    @Override
+    @Override   //Returns the Version
     public String getVersion(){
         return version;
     }
 
-    @Override
+    @Override   //Returns the Origin
     public String getOrigin(){
         return origin;
     }
 
-    @Override
+    @Override   //Returns the Assembly Line
     public String getAssemblyLine(){
         return assemblyLine;
     }
 
-    @Override
+    @Override   //Returns the Number
     public String getNumber(){
         return number;
     }
 
-    @Override
+    @Override   //Returns the Serial Number
     public String getSerialNumber(){
         return serialNumber;
     }
@@ -98,21 +102,18 @@ public class Erista_v1 implements SwitchC {
      * @return true or false
      */
     @Override
-    public boolean getRefurb(){
-        if (assemblyLine.charAt(1)=='9')
-            return true;
-        else
-            return false;
+    public boolean getRefurbished(){
+        return assemblyLine.charAt(1) == '9';
     }
 
-    @Override
+    @Override   //Message to be printed
     public void print(){
         System.out.println("=========================================================");
         System.out.println("Version: "+getVersion());
         System.out.println("Origin: "+getOrigin());
         System.out.println("Serial Number: "+getSerialNumber());
         System.out.println("Assembly Line & Number: "+getAssemblyLine()+" no."+getNumber());
-        System.out.println("Refurbished by Nintendo: "+getRefurb());
+        System.out.println("Refurbished by Nintendo: "+ getRefurbished());
         System.out.println("Hackability: "+getHackability());
         System.out.println("=========================================================");
     }

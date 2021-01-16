@@ -1,6 +1,10 @@
 package com.switchcheck.SerialModelState;
 
-public class LiteState implements State {
+/**
+ * A concrete class implementing State interface
+ * (sets Version state to 'Lite')
+ */
+public class LiteState implements StateInterface {
     public void doAction(SwitchContext context){
         System.out.println("(Version set to 'Lite' state)");
         context.setVersionState(this);

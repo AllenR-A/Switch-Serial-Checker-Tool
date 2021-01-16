@@ -2,7 +2,11 @@ package com.switchcheck.SerialModelState;
 
 import com.switchcheck.SerialState;
 
-public class SerialNumberState implements State{
+/**
+ * A concrete class implementing State interface
+ * (sets Serial Number state to the input)
+ */
+public class SerialNumberState implements StateInterface {
     String string = SerialState.serialState;
 
     public void doAction(SwitchContext context){

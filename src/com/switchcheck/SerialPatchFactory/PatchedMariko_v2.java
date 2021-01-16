@@ -1,6 +1,12 @@
 package com.switchcheck.SerialPatchFactory;
 
-public class PatchedMariko_v2 implements SwitchF {
+/**
+ * This is the Patched Mariko (v2) object
+ */
+public class PatchedMariko_v2 implements SwitchFactoryInterface {
+    /**
+     * @return a text block of information
+     */
     public String inform(){
         return """
                 

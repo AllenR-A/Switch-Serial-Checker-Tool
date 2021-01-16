@@ -2,7 +2,7 @@ package com.switchcheck.SerialModelState;
 
 import com.switchcheck.SerialState;
 
-public class AssemblyLineState implements State {
+public class AssemblyLineState implements StateInterface {
     String string = SerialState.assemblyState;
 
     public void doAction(SwitchContext context){

@@ -1,6 +1,12 @@
 package com.switchcheck.SerialPatchFactory;
 
-public class MightBePatchedEristaK_v1 implements SwitchF {
+/**
+ * This is the "Might-be-patched-since-it's-an-unknown-korean-unit" Erista (v1) object
+ */
+public class MightBePatchedEristaK_v1 implements SwitchFactoryInterface {
+    /**
+     * @return a text block of information
+     */
     public String inform(){
         return """
                 

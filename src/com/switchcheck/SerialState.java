@@ -12,6 +12,7 @@ public class SerialState {
 
     /**
      * SwitchSerialState() will act like main() in State Design Pattern
+     * (this uses nested if...else, since, it has to)
      * @param serial Takes in a serial number of the format "XXX00000000000" | 3 Letters & 11 Numbers
      * @return This returns a String message
      */
@@ -127,7 +128,7 @@ public class SerialState {
             }
         }
 
-        String stateMessage = """
+        String STATE_MESSAGE = """
                 
                 ==========================================
                                 YOUR UNIT
@@ -140,6 +141,6 @@ public class SerialState {
                 ==========================================
                 ==========================================""";
 
-        return String.format(stateMessage, context.getVersionState(),context.getOriginState(),context.getSerialNumberState(),context.getAssemblyLineState(),context.getNumberState(),context.getRefurbishedState());
+        return String.format(STATE_MESSAGE, context.getVersionState(),context.getOriginState(),context.getSerialNumberState(),context.getAssemblyLineState(),context.getNumberState(),context.getRefurbishedState());
     }
 }

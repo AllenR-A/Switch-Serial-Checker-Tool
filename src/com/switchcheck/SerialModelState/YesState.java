@@ -1,6 +1,10 @@
 package com.switchcheck.SerialModelState;
 
-public class YesState implements State{
+/**
+ * A concrete class implementing State interface
+ * (sets Refurbished state to 'Yes')
+ */
+public class YesState implements StateInterface {
     public void doAction(SwitchContext context){
         System.out.println("(Refurbished set to 'Yes' state)");
         context.setRefurbishedState(this);
