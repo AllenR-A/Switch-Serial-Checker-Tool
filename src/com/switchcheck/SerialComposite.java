@@ -1,6 +1,6 @@
 package com.switchcheck;
 
-import com.switchcheck.SerialInfoComposite.*;
+import com.switchcheck.SerialInformationComposite.*;
 
 /**
  * This tells the user whether their system is patched or not + other information.
@@ -20,7 +20,7 @@ public class SerialComposite {
                 switchCom1.add(switch1);
                 switchCom1.print();
             } else if (serial.charAt(2)=='W'){
-                SwitchC switch1 = new Erista_v1("Erista (v1)", "West", serial.substring(2,5), serial.substring(5), serial);
+                SwitchC switch1 = new Erista_v1("Erista (v1)", "Western Countries", serial.substring(2,5), serial.substring(5), serial);
                 switchCom1.add(switch1);
                 switchCom1.print();
             } else if (serial.charAt(2)=='K'){
@@ -34,7 +34,7 @@ public class SerialComposite {
                 switchCom1.add(switch1);
                 switchCom1.print();
             } else if (serial.charAt(2)=='W'){
-                SwitchC switch1 = new Mariko_v2("Mariko (v2)", "West", serial.substring(2,5), serial.substring(5), serial);
+                SwitchC switch1 = new Mariko_v2("Mariko (v2)", "Western Countries", serial.substring(2,5), serial.substring(5), serial);
                 switchCom1.add(switch1);
                 switchCom1.print();
             } else if (serial.charAt(2)=='K'){
@@ -48,7 +48,7 @@ public class SerialComposite {
                 switchCom1.add(switch1);
                 switchCom1.print();
             } else if (serial.charAt(2)=='W'){
-                SwitchC switch1 = new MarikoLite_v2("Lite (v2)", "West", serial.substring(2,5), serial.substring(5), serial);
+                SwitchC switch1 = new MarikoLite_v2("Lite (v2)", "Western Countries", serial.substring(2,5), serial.substring(5), serial);
                 switchCom1.add(switch1);
                 switchCom1.print();
             } else if (serial.charAt(2)=='K'){

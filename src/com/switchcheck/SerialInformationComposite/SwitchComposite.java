@@ -1,4 +1,4 @@
-package com.switchcheck.SerialInfoComposite;
+package com.switchcheck.SerialInformationComposite;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,13 +1,13 @@
-package com.switchcheck.SerialInfoComposite;
+package com.switchcheck.SerialInformationComposite;
 
-public class MarikoLite_v2 implements SwitchC {
+public class Mariko_v2 implements SwitchC {
     String version;
     String origin;
     String assemblyLine;
     String number;
     String serialNumber;
 
-    public MarikoLite_v2(String version, String origin, String assemblyLine, String number, String serialNumber) {
+    public Mariko_v2(String version, String origin, String assemblyLine, String number, String serialNumber) {
         this.version = version;
         this.origin = origin;
         this.assemblyLine = assemblyLine;
@@ -59,7 +59,7 @@ public class MarikoLite_v2 implements SwitchC {
     public String getHackability(){
         return """
                 Patched. Hardmod only.
-                \t\t\t (use controversial 'SX Lite' for now but
+                \t\t\t (use controversial 'sx core' for now but
                 \t\t\t you have to google the rest unfortunately)
                 \t\t\t I recommend checking out GBAtemp for help.""";
     }

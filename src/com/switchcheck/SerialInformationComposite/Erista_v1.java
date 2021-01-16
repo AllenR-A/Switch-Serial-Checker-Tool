@@ -1,4 +1,4 @@
-package com.switchcheck.SerialInfoComposite;
+package com.switchcheck.SerialInformationComposite;
 import com.switchcheck.EristaPatchCheck;
 
 public class Erista_v1 implements SwitchC {

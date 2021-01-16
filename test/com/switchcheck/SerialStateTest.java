@@ -1,25 +1,13 @@
 package com.switchcheck;
 
 import com.switchcheck.SerialModelState.*;
-/**
- * This tells the user other info about their system.
- * This uses State Design Pattern
- */
-public class SerialState {
-    public static String serialState;
-    public static String assemblyState;
-    public static String numberState;
+import org.junit.jupiter.api.Test;
 
-    /**
-     * SwitchSerialState() will act like main() in State Design Pattern
-     * @param serial Takes in a serial number of the format "XXX00000000000" | 3 Letters & 11 Numbers
-     * @return This returns a String message
-     */
-    public static String SwitchSerialState(String serial) {
-        serialState = serial;
-        assemblyState = serial.substring(2,5);
-        numberState = serial.substring(6);
+class SerialStateTest {
+    public static String serialState = "XJJ90084050000";
 
+    @Test
+    void switchSerialState() {
         SwitchContext context = new SwitchContext();
 
         JapaneseState japaneseState = new JapaneseState();
@@ -127,19 +115,19 @@ public class SerialState {
             }
         }
 
-        String stateMessage = """
+        System.out.println("""
+                ==========================================
+                Version:"""+" "+context.getVersionState()+"""
+                                
+                Origin:""" +" "+context.getOriginState()+"""
                 
-                ==========================================
-                                YOUR UNIT
-                ==========================================
-                 Version: %s
-                 Origin: %s
-                 Serial Number: %s
-                 Assembly Line & Number: %s no.%s
-                 Refurbished by Nintendo: %s
-                ==========================================
-                ==========================================""";
+                Serial Number:"""+" "+context.getSerialNumberState()+"""
+                
+                Assembly Line & Number:"""+" "+context.getAssemblyLineState()+" no."+context.getNumberState()+"""
+                
+                Refurbished by Nintendo:"""+" "+context.getRefurbishedState()+"""
+                
+                ==========================================""");
 
-        return String.format(stateMessage, context.getVersionState(),context.getOriginState(),context.getSerialNumberState(),context.getAssemblyLineState(),context.getNumberState(),context.getRefurbishedState());
     }
 }

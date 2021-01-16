@@ -40,15 +40,15 @@ public class Main {
      */
     public static void pick(int i) {
         if (i == 1) {
-            System.out.println("You Picked: 1. Patched Switch Checker\n");
+            System.out.println("You Picked: 1. Patched Switch Checker\n======================================\n");
             System.out.println(SerialFactory.SwitchSerialFactory(serialInput()));
             //return "Picked Factory Pattern";
         } else if (i == 2) {
-            System.out.println("You Picked: 2. Other Switch Information\n");
-            System.out.println(SerialComposite.SwitchSerialComposite(serialInput()));
+            System.out.println("You Picked: 2. Other Switch Information\n======================================\n");
+            System.out.println(SerialState.SwitchSerialState(serialInput()));
             //return "Picked State Pattern";
-        } else {
-            System.out.println("You Picked: 3. All of the above, \n");
+        } else if (i == 3) {
+            System.out.println("You Picked: 3. All of the above\n======================================\n");
             System.out.println(SerialComposite.SwitchSerialComposite(serialInput()));
             //return "Picked Composite Pattern";
         }
@@ -61,29 +61,42 @@ public class Main {
      */
     public static String serialInput() {
         Scanner scan = new Scanner(System.in);
-        System.out.println("Find your system's serial number at the bottom of the device");
-        System.out.println("Or in \"System Settings\" -> \"System\" -> \"Serial Information\"\n");
-        System.out.print("Format should be:");
-        System.out.println("\"XXX00000000000\"");
-        System.out.println("3 Letters followed by 11 numbers");
-        System.out.println("\"X\" means letters");
-        System.out.println("\"0\" means numbers\n");
-        System.out.println("Should look like: \"XAW10045230300\"\n");
+        System.out.println("""
+                ==============================================================
+                ==============================================================
+                Find your system's serial number at the bottom of the device
+                Or in "System Settings" -> "System" -> "Serial Information"
+                ==============================================================
+                 Format should be:   "XXX00000000000"
+                   3 Letters followed by 11 numbers
+                    "X" = letters | "0" = numbers
+                ==============================================================
+                For example, it should look like: "XAW10045230300" """);
         System.out.print("Input Serial Number: ");
         try{
             serialin = scan.nextLine();
             long numbers = Long.parseLong(serialin.substring(3)); //this is here to triggered an exception if someone types a letter where the numbers are (after the 3 letters)
             if (serialin.length() == 14) {
-                System.out.println("Your serial number: "+serialin+"\n");
-                return serialin;
+                if (serialin.charAt(3)=='1'||serialin.charAt(3)=='4'||serialin.charAt(3)=='7'||serialin.charAt(3)=='9'){
+                    System.out.println("Your serial number: "+serialin+"\n==============================================================\n==============================================================\n");
+                    return serialin;
+                } else {
+                    System.out.println("""
+                            ==============================================================
+                            ==============================================================
+                                                Wrong serial number.
+                               So far, no unit has the first number (this here: XXX0<-)
+                                to be any number other than 1,4,7, or 9, so try again.""");
+                    serialInput();
+                }
             } else {
-                System.out.println(serialin+"\n");
-                System.out.println("Wrong input, that's not what it looks like. Follow the format.\n");
+                System.out.print("Wrong serial number: "+serialin+"\n");
+                System.out.println("WRONG INPUT, that's not what it looks like. Follow the format.");
                 serialInput();
             }
         } catch (Exception e) {
             System.out.println(serialin+"\n");
-            System.out.println("Wrong input, that's not what it looks like. Follow the format.\n");
+            System.out.println("Wrong input, that's not what it looks like. Follow the format.");
             serialInput();
         }
         return "*this* string shouldn't appear";
@@ -95,16 +108,18 @@ public class Main {
      * @param args (the usual)
      */
     public static void main(String[] args) {
-        System.out.println("====================================");
-        System.out.println("= = =Switch Serial Checker Tool= = =");
-        System.out.println("====================================");
-        System.out.println("====================================");
-        System.out.println("        Pick one from the 3:        ");
-        System.out.println("====================================");
-        System.out.println("1. Checker if Patched or Unpatched");
-        System.out.println("2. Other Switch Information");
-        System.out.println("3. All of the above");
-        System.out.println("(Input \"1\", \"2\", or \"3\")\n");
+        System.out.println("""
+                ======================================
+                 = = =Switch Serial Checker Tool= = =
+                ======================================
+                ======================================
+                         Pick one from the 3:        
+                ======================================
+                1.Patched Switch Checker
+                2. Other Switch Information
+                3. All of the above
+                (Input "1", "2", or "3")
+                ======================================""");
 
         System.out.print("Input: ");
         startPick();

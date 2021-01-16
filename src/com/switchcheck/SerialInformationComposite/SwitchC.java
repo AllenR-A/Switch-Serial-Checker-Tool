@@ -1,4 +1,4 @@
-package com.switchcheck.SerialInfoComposite;
+package com.switchcheck.SerialInformationComposite;
 
 /**
  * The interface in Composite Design

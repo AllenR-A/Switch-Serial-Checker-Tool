@@ -1,6 +1,6 @@
 package com.switchcheck;
 
-import com.switchcheck.SerialInfoComposite.*;
+import com.switchcheck.SerialInformationComposite.*;
 import org.junit.jupiter.api.Test;
 
 class SerialCompositeTest {
