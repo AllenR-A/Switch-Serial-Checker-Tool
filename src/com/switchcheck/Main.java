@@ -9,6 +9,8 @@ import java.util.Scanner;
 public class Main {
     public static int input;
     public static String serialin;
+    public static int serialLength;
+    public static Scanner scan = new Scanner(System.in);
 
     /**
      * This is just for restarting for wrong inputs
@@ -60,11 +62,10 @@ public class Main {
      * @return returns the serial number
      */
     public static String serialInput() {
-        Scanner scan = new Scanner(System.in);
         System.out.println("""
                 ==============================================================
                 ==============================================================
-                Find your system's serial number at the bottom of the device
+                Find your Switch's serial number at the bottom of the device
                 Or in "System Settings" -> "System" -> "Serial Information"
                 ==============================================================
                  Format should be:   "XXX00000000000"
@@ -73,10 +74,11 @@ public class Main {
                 ==============================================================
                 For example, it should look like: "XAW10045230300" """);
         System.out.print("Input Serial Number: ");
+        serialin = scan.nextLine();
+        serialLength = serialin.length();
         try{
-            serialin = scan.nextLine();
             long numbers = Long.parseLong(serialin.substring(3)); //this is here to triggered an exception if someone types a letter where the numbers are (after the 3 letters)
-            if (serialin.length() == 14) {
+            if (serialLength==14) {
                 if (serialin.charAt(3)=='1'||serialin.charAt(3)=='4'||serialin.charAt(3)=='7'||serialin.charAt(3)=='9'){
                     System.out.println("Your serial number: "+serialin+"\n==============================================================\n==============================================================\n");
                     return serialin;
