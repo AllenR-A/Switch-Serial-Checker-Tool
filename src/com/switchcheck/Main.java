@@ -77,7 +77,7 @@ public class Main {
         serialin = scan.nextLine();
         serialLength = serialin.length();
         try{
-            long numbers = Long.parseLong(serialin.substring(3)); //this is here to triggered an exception if someone types a letter where the numbers are (after the 3 letters)
+            Long.parseLong(serialin.substring(3)); //this is here to triggered an exception if someone types a letter where the numbers are (after the 3 letters)
             if (serialLength==14) {
                 if (serialin.charAt(3)=='1'||serialin.charAt(3)=='4'||serialin.charAt(3)=='7'||serialin.charAt(3)=='9'){
                     System.out.println("Your serial number: "+serialin+"\n==============================================================\n==============================================================\n");
@@ -117,7 +117,7 @@ public class Main {
                 ======================================
                          Pick one from the 3:        
                 ======================================
-                1.Patched Switch Checker
+                1. Patched Switch Checker
                 2. Other Switch Information
                 3. All of the above
                 (Input "1", "2", or "3")
