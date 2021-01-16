@@ -90,18 +90,20 @@ public class Main {
                                So far, no unit has the first number (this here: XXX0<-)
                                 to be any number other than 1,4,7, or 9, so try again.""");
                     serialInput();
+                    return serialin;
                 }
             } else {
                 System.out.print("Wrong serial number: "+serialin+"\n");
                 System.out.println("WRONG INPUT, that's not what it looks like. Follow the format.");
                 serialInput();
+                return serialin;
             }
         } catch (Exception e) {
             System.out.println(serialin+"\n");
             System.out.println("Wrong input, that's not what it looks like. Follow the format.");
             serialInput();
+            return serialin;
         }
-        return "*this* string shouldn't appear";
     }
 
     /**
