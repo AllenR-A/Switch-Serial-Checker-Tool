@@ -8,6 +8,27 @@ Solution: Check using its serial number. <br />
 It's basically the same as [these](https://ismyswitchpatched.com/) [sites](https://damota.me/ssnc/checker) but can be run offline. <br />
 Since some prolly just want to know but might not have internet for some reason.<br />
 Though unfortunately, some internet access might be needed as a **very useful** guide when modifying the Switch.
+
+This has 3 options:
+<br />+ Show patched status (a bit detailed)
+<br />+ Show other information (based on serial number)
+<br />+ Both (with patched status part shortened)
+
+Preview:
+
+
+                        ======================================
+                         = = =Switch Serial Checker Tool= = =
+                        ======================================
+                        ======================================
+                                 Pick one from the 3:        
+                        ======================================
+                        1. Patched Switch Checker
+                        2. Other Switch Information
+                        3. All of the above
+                        (Input "1", "2", or "3")
+                        ======================================
+                
 ## Design Patterns
 [Factory](https://www.tutorialspoint.com/design_pattern/factory_pattern.htm) -> For the patch checker since all the switches' serial numbers should follow the same format.
 <br />[State](https://www.tutorialspoint.com/design_pattern/state_pattern.htm) -> The state (model information) changes based on the serial number inputted.
