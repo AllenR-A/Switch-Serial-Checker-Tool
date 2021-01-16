@@ -17,17 +17,17 @@ This has 3 options:
 Preview:
 
 
-                                      ======================================
-                                       = = =Switch Serial Checker Tool= = =
-                                      ======================================
-                                      ======================================
-                                               Pick one from the 3:        
-                                      ======================================
-                                      1. Patched Switch Checker
-                                      2. Other Switch Information
-                                      3. All of the above
-                                      (Input "1", "2", or "3")
-                                      ======================================
+                                       ======================================
+                                        = = =Switch Serial Checker Tool= = =
+                                       ======================================
+                                       ======================================
+                                                Pick one from the 3:        
+                                       ======================================
+                                       1. Patched Switch Checker
+                                       2. Other Switch Information
+                                       3. All of the above
+                                       (Input "1", "2", or "3")
+                                       ======================================
                 
 ## Design Patterns
 [Factory](https://www.tutorialspoint.com/design_pattern/factory_pattern.htm) -> For the patch checker since all the switches' serial numbers should follow the same format.
