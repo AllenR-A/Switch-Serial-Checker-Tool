@@ -4,22 +4,29 @@ import java.util.Scanner;
 
 /**
  * The main class.
- * Has attribute ["input"].
+ * Has attribute "input" & "serialin".
  */
 public class Main {
     public static int input;
+    public static String serialin;
 
     /**
      * This is just for restarting for wrong inputs
      */
     public static void startPick(){
         Scanner scan = new Scanner(System.in);
-        input = scan.nextInt();
+        try{
+            input = scan.nextInt();
+        } catch (Exception e) {
+            System.out.println("Wrong Input!(Input \"1\", \"2\", or \"3\")");
+            System.out.print("Input:");
+            startPick();
+        }
 
         if (input == 1 || input == 2 || input == 3)
             pick(input);
         else {
-            System.out.println("Wrong Input!");
+            System.out.println("Wrong Input!(Input \"1\", \"2\", or \"3\")");
             System.out.print("Input:");
             startPick();
         }
@@ -28,29 +35,28 @@ public class Main {
     /**
      * This picks between 3 options
      * each option uses a different design pattern
-     *
+     * The (now a comment) return statement was just for testing
      * @param i This accepts [1, 2, then every other int]
-     * @return This return statement is just for testing
      */
-    public static String pick(int i) {
+    public static void pick(int i) {
         if (i == 1) {
             System.out.println("You Picked: 1. Patched Switch Checker\n");
             System.out.println(SerialFactory.SwitchSerialFactory(serialInput()));
-            return "Picked Factory Pattern";
+            //return "Picked Factory Pattern";
         } else if (i == 2) {
             System.out.println("You Picked: 2. Other Switch Information\n");
-            SerialModelState serialModel = new SerialModelState(serialInput());
-            return "Picked State Pattern";
+            System.out.println(SerialComposite.SwitchSerialComposite(serialInput()));
+            //return "Picked State Pattern";
         } else {
-            System.out.println("You Picked: 3. All of the above\n");
-            SerialComposite serialAll = new SerialComposite(serialInput());
-            return "Picked Composite Pattern";
+            System.out.println("You Picked: 3. All of the above, \n");
+            System.out.println(SerialComposite.SwitchSerialComposite(serialInput()));
+            //return "Picked Composite Pattern";
         }
     }
 
     /**
      * Asks the user for the Switch Unit's Serial Number
-     *
+     * this also has attribute "numbers" in the code.
      * @return returns the serial number
      */
     public static String serialInput() {
@@ -64,11 +70,18 @@ public class Main {
         System.out.println("\"0\" means numbers\n");
         System.out.println("Should look like: \"XAW10045230300\"\n");
         System.out.print("Input Serial Number: ");
-        String serialin = scan.nextLine();
-        if (serialin.length() == 14) {
-            System.out.println("Your serial number: "+serialin);
-            return serialin;
-        } else {
+        try{
+            serialin = scan.nextLine();
+            long numbers = Long.parseLong(serialin.substring(3)); //this is here to triggered an exception if someone types a letter where the numbers are (after the 3 letters)
+            if (serialin.length() == 14) {
+                System.out.println("Your serial number: "+serialin+"\n");
+                return serialin;
+            } else {
+                System.out.println(serialin+"\n");
+                System.out.println("Wrong input, that's not what it looks like. Follow the format.\n");
+                serialInput();
+            }
+        } catch (Exception e) {
             System.out.println(serialin+"\n");
             System.out.println("Wrong input, that's not what it looks like. Follow the format.\n");
             serialInput();
@@ -78,7 +91,7 @@ public class Main {
 
     /**
      * This is the Main Method.
-     * This shows the user 3 options, then calls startpick() to start asking the user to choose.
+     * This shows the user 3 options, then calls startPick() to start asking the user to choose.
      * @param args (the usual)
      */
     public static void main(String[] args) {
@@ -95,6 +108,7 @@ public class Main {
 
         System.out.print("Input: ");
         startPick();
+
     }
 
 }

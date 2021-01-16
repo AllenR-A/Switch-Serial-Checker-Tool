@@ -1,15 +1,19 @@
 package com.switchcheck.SerialPatchFactory;
 
-public class PatchedMariko_v2 implements SwitchF {
+public class MightBePatchedEristaK_v1 implements SwitchF {
     public String inform(){
         return """
                 
-                Mariko (v2) - Hardware Patched.
+                Erista (v1)(Korean) - Might be Patched...
                 =========================================================================================================
-                You're a bit unlucky, You have a "Hardware Patched" unit (NOT vulnerable to the Fusée Gelée exploit)
-                The good part is that this model has a better batter life compared to those older v1/Erista Switches.
+                Your Model/Unit *might* be "Patched" (NOT vulnerable to the Fusée Gelée exploit)
+                It's hard to check this unit using it's serial number. Go here: https://gbatemp.net/threads/512018/
+                (This one's shrouded in mystery since this model doesn't
+                 have that much documentation, and is only sold in Korea)
                 =========================================================================================================
-                You won't be able to jailbreak it unless:
+                If it turns-out to be a "Patched" model/unit, you won't be able to jailbreak it unless:
+                          + You're on firmware 4.1.0 & use Caffeine through PegaScape. (google it if you are on 4.1.0)
+                          or
                           + You're using one of those controversial "SX Core" chips also called "gateway chips"
                             which you need to solder to tiny points inside the switch. It's hard, so unless you're
                             really confident on your soldering skills, read & watch guides on GBAtemp/YouTube or you
@@ -17,10 +21,12 @@ public class PatchedMariko_v2 implements SwitchF {
                             (also, these chips are controversial as they come from a controversial company Xecuter,
                             where some -2- people have recently been arrested, one being the CEO named "Bowser" it seems)
                 =========================================================================================================
-                You can run the usual CFW, homebrew, etc. But installing & running Android/Linux DOESN'T WORK YET.
-                You can run homebrew EXCEPT "RCM"-related homebrew, running these will brick your switch!
+                The upside is, if you managed to jailbreak this unit, you can still install & run Android/Linux, or the
+                usual CFW, homebrew, emulators, etc. EXCEPT "RCM"-related homebrew, running these will brick your switch!
                 (google the rest as it's too long to include and I might get spied-on by Nintendo ninjas)
-                Here's a cool scenario:
+                Here's some cool scenarios:
+                    + Use Custom Themes on the Switch.
+                    + Playing PC/Steam/Xbox games on Switch (Install Android + use "Steam Link" or "Xbox Game Pass").
                     + Playing PS4/PS5 games on Switch (turn on PS4/PS5 + use chiaki homebrew to stream to the Switch).
                     + Other extra stuff you can do with homebrew...
                 =========================================================================================================""";

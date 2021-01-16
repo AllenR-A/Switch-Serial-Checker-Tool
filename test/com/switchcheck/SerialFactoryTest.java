@@ -1,6 +1,6 @@
 package com.switchcheck;
 
-import com.switchcheck.SerialPatchFactory.Switch;
+import com.switchcheck.SerialPatchFactory.SwitchF;
 import com.switchcheck.SerialPatchFactory.SwitchFactory;
 import org.junit.jupiter.api.Test;
 
@@ -12,7 +12,7 @@ class SerialFactoryTest {
     void CreateSwitch(){
         String serial = "MarikoLite-Patched";
         SwitchFactory switchFactory = new SwitchFactory();
-        Switch switch1 = switchFactory.getSwitch(serial);
+        SwitchF switch1 = switchFactory.getSwitch(serial);
         switch (serial){
             case "Erista-Unpatched":
                 assertEquals("It's Unpatched!", switch1.inform());

@@ -5,13 +5,17 @@ package com.switchcheck.SerialPatchFactory;
  * the Strings would be pre-defined already.
  */
 public class SwitchFactory {
-    public Switch getSwitch(String switchModel){
+    public SwitchF getSwitch(String switchModel){
         if (switchModel.equals("Erista-Unpatched")){
             return new UnpatchedErista_v1();
         } else if (switchModel.equals("Erista-Maybe")){
             return new MightBePatchedErista_v1();
+        } else if (switchModel.equals("EristaK-Maybe")){
+            return new MightBePatchedEristaK_v1();
         } else if (switchModel.equals("Erista-Patched")){
             return new PatchedErista_v1();
+        } else if (switchModel.equals("Refurbished-Maybe")){
+            return new Refurbished_v1();
         } else if (switchModel.equals("Mariko-Patched")){
             return new PatchedMariko_v2();
         } else if (switchModel.equals("MarikoLite-Patched")){

@@ -8,7 +8,7 @@ class MainTest {
     void main() {
         //assertEquals("Picked Factory Pattern", Main.pick(1));
         //assertEquals("Picked State Pattern", Main.pick(2));
-        assertEquals("Picked Composite Pattern", Main.pick(3));
+        //assertEquals("Picked Composite Pattern", Main.pick(3));
     }
 
     @org.junit.jupiter.api.Test // Done, replaced the temporary [serialin = "XXXX1234567890"] with [serialin = scan.nextLine()]

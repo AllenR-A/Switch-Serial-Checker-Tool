@@ -1,6 +1,6 @@
 package com.switchcheck.SerialPatchFactory;
 
-public class dummySwitch implements Switch {
+public class dummySwitch implements SwitchF {
     public String inform(){
         return "Dummy Switch Model, this is.";
     }
