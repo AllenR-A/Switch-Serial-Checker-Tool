@@ -1,14 +1,17 @@
 # Switch-Serial-Checker-Tool
 A CMSC 22 Java Project in UP Visays [Mr. Pabroquez]
 
+My Hobby/Interest: Console Modding/Jailbreaking <br />
+Problem: Can I "hack" my nintendo switch? <br />
+Solution: Check using its serial number. <br />
 ## What is it?
 It's basically the same as [these](https://ismyswitchpatched.com/) [sites](https://damota.me/ssnc/checker) but can be run offline. <br />
 Since some prolly just want to know but might not have internet for some reason.<br />
 Though unfortunately, some internet access might be needed as a **very useful** guide when modifying the Switch.
-## 
-My Hobby/Interest: Console Modding/Jailbreaking <br />
-Problem: Can I "hack" my nintendo switch? <br />
-Solution: Check using its serial number. <br />
+## Design Patterns
+[Factory](https://www.tutorialspoint.com/design_pattern/factory_pattern.htm) -> For the patch checker since all the switches' serial numbers should follow the same format.
+<br />[State](https://www.tutorialspoint.com/design_pattern/state_pattern.htm) -> The state (model information) changes based on the serial number inputted.
+<br />[Composite](https://www.javatpoint.com/composite-pattern) -> It'll be tree-like (models are the leaf nodes).
 <br />
 <br />
 <br />
@@ -19,7 +22,7 @@ Solution: Check using its serial number. <br />
 <br />
 <br />
 <br />
-## For possibly-patched switches
+## For "possibly-patched" Switches
 [\[gbatemp.net\] A definitive way to test if your Switch is patched or not (purchases after 07-2018)](https://gbatemp.net/threads/512018/)
 ## References
 [Is My Switch Patched?](https://ismyswitchpatched.com/)
