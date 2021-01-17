@@ -62,9 +62,9 @@ public class MarikoLite_v2 implements SwitchCompositeInterface {
     public String getHackability(){
         return """
                 Patched. Hardmod only.
-                \t\t\t (use controversial 'SX Lite' for now but
-                \t\t\t you have to google the rest unfortunately)
-                \t\t\t I recommend checking out GBAtemp for help.""";
+                             (use controversial 'SX Lite' for now but
+                             you have to google the rest unfortunately)
+                             I recommend checking out GBAtemp for help.""";
     }
 
     /**

@@ -33,11 +33,11 @@ public class SerialState {
         NoState falseState = new NoState();
 
         numberState.doAction(context);
-        if (serialState.charAt(1)=='A') {
+        if (serialState.charAt(1)=='A') {                   //For Erista state
             EristaState eristaState = new EristaState();
             eristaState.doAction(context);
-            if (serialState.charAt(2)=='J') {
-                if (serialState.charAt(3)=='9'){
+            if (serialState.charAt(2)=='J') {                   //For Japanese state
+                if (serialState.charAt(3)=='9'){                //For Refurbished state
                     trueState.doAction(context);
                 } else {
                     falseState.doAction(context);
@@ -45,8 +45,8 @@ public class SerialState {
                 serialNumberState.doAction(context);
                 assemblyLineState.doAction(context);
                 japaneseState.doAction(context);
-            } else if (serialState.charAt(2)=='W') {
-                if (serialState.charAt(3)=='9'){
+            } else if (serialState.charAt(2)=='W') {            //For Western state
+                if (serialState.charAt(3)=='9'){                //For Refurbished state
                     trueState.doAction(context);
                 } else {
                     falseState.doAction(context);
@@ -54,8 +54,8 @@ public class SerialState {
                 serialNumberState.doAction(context);
                 assemblyLineState.doAction(context);
                 westernState.doAction(context);
-            } else if (serialState.charAt(2)=='K') {
-                if (serialState.charAt(3)=='9'){
+            } else if (serialState.charAt(2)=='K') {            //For Korean state
+                if (serialState.charAt(3)=='9'){                //For Refurbished state
                     trueState.doAction(context);
                 } else {
                     falseState.doAction(context);
@@ -64,11 +64,11 @@ public class SerialState {
                 assemblyLineState.doAction(context);
                 koreanState.doAction(context);
             }
-        } else if (serialState.charAt(1)=='K') {
+        } else if (serialState.charAt(1)=='K') {            //For Mariko state
             MarikoState marikoState = new MarikoState();
             marikoState.doAction(context);
-            if (serialState.charAt(2)=='J') {
-                if (serialState.charAt(3)=='9'){
+            if (serialState.charAt(2)=='J') {                   //For Japanese state
+                if (serialState.charAt(3)=='9'){                //For Refurbished state
                     trueState.doAction(context);
                 } else {
                     falseState.doAction(context);
@@ -76,8 +76,8 @@ public class SerialState {
                 serialNumberState.doAction(context);
                 assemblyLineState.doAction(context);
                 japaneseState.doAction(context);
-            } else if (serialState.charAt(2)=='W') {
-                if (serialState.charAt(3)=='9'){
+            } else if (serialState.charAt(2)=='W') {            //For Western state
+                if (serialState.charAt(3)=='9'){                //For Refurbished state
                     trueState.doAction(context);
                 } else {
                     falseState.doAction(context);
@@ -85,8 +85,8 @@ public class SerialState {
                 serialNumberState.doAction(context);
                 assemblyLineState.doAction(context);
                 westernState.doAction(context);
-            } else if (serialState.charAt(2)=='K') {
-                if (serialState.charAt(3)=='9'){
+            } else if (serialState.charAt(2)=='K') {            //For Korean state
+                if (serialState.charAt(3)=='9'){                //For Refurbished state
                     trueState.doAction(context);
                 } else {
                     falseState.doAction(context);
@@ -95,11 +95,11 @@ public class SerialState {
                 assemblyLineState.doAction(context);
                 koreanState.doAction(context);
             }
-        } else if (serialState.charAt(1)=='J') {
+        } else if (serialState.charAt(1)=='J') {            //For Lite state
             LiteState liteState = new LiteState();
             liteState.doAction(context);
-            if (serialState.charAt(2)=='J') {
-                if (serialState.charAt(3)=='9'){
+            if (serialState.charAt(2)=='J') {                   //For Japanese state
+                if (serialState.charAt(3)=='9'){                //For Refurbished state
                     trueState.doAction(context);
                 } else {
                     falseState.doAction(context);
@@ -107,8 +107,8 @@ public class SerialState {
                 serialNumberState.doAction(context);
                 assemblyLineState.doAction(context);
                 japaneseState.doAction(context);
-            } else if (serialState.charAt(2)=='W') {
-                if (serialState.charAt(3)=='9'){
+            } else if (serialState.charAt(2)=='W') {            //For Western state
+                if (serialState.charAt(3)=='9'){                //For Refurbished state
                     trueState.doAction(context);
                 } else {
                     falseState.doAction(context);
@@ -116,8 +116,8 @@ public class SerialState {
                 serialNumberState.doAction(context);
                 assemblyLineState.doAction(context);
                 westernState.doAction(context);
-            } else if (serialState.charAt(2)=='K') {
-                if (serialState.charAt(3)=='9'){
+            } else if (serialState.charAt(2)=='K') {            //For Korean state
+                if (serialState.charAt(3)=='9'){                //For Refurbished state
                     trueState.doAction(context);
                 } else {
                     falseState.doAction(context);

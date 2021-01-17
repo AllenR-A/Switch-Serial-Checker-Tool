@@ -70,30 +70,30 @@ public class Erista_v1 implements SwitchCompositeInterface {
         if (EristaPatchCheck.patchCheck(getAssemblyLine(),getNumber()).equals("Unpatched"))
             return """
                     Yay! It's Unpatched! (softmoddable)
-                    \t\t\t (have to google the rest unfortunately)
-                    \t\t\t I recommend checking out GBAtemp for help.""";
+                                 (have to google the rest unfortunately)
+                                 I recommend checking out GBAtemp for help.""";
         else if (EristaPatchCheck.patchCheck(getAssemblyLine(),getNumber()).equals("Maybe"))
             return """
                     It might be Patched. (check here:
-                    \t\t\t https://gbatemp.net/threads/512018/)""";
+                                 https://gbatemp.net/threads/512018/)""";
         else if (EristaPatchCheck.patchCheck(getAssemblyLine(),getNumber()).equals("Refurbished"))
             return """
                     It might be Patched since 
-                    \t\t\t Nintendo refurbished it. (check here:
-                    \t\t\t https://gbatemp.net/threads/512018/)""";
+                                 Nintendo refurbished it. (check here:
+                                 https://gbatemp.net/threads/512018/)""";
 
         else if (EristaPatchCheck.patchCheck(getAssemblyLine(),getNumber()).equals("Patched"))
             return """
                     Patched. Hardmod only.
-                    \t\t\t (use controversial 'sx core' for now but
-                    \t\t\t you have to google the rest unfortunately)
-                    \t\t\t I recommend checking out GBAtemp for help.""";
+                                 (use controversial 'sx core' for now but
+                                 you have to google the rest unfortunately)
+                                 I recommend checking out GBAtemp for help.""";
         else if (EristaPatchCheck.patchCheck(getAssemblyLine(),getNumber()).equals("Korean"))
             return """
                     This model might be patched but who knows
-                    \t\t\t check here: gbatemp.net/threads/512018/
-                    \t\t\t It's unknown since not that well-documented
-                    \t\t\t and it's only sold in Korea.""";
+                                 check here: gbatemp.net/threads/512018/
+                                 It's unknown since not that well-documented
+                                 and it's only sold in Korea.""";
         return "if *this* appears, something went wrong with Erista's getHackability()";
     }
 

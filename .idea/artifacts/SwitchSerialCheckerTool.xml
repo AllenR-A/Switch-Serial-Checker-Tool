@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact name="SwitchSerialCheckerTool">
+    <output-path>$PROJECT_DIR$/out/artifacts/SwitchSerialCheckerTool</output-path>
+    <root id="root">
+      <element id="archive" name="SwitchSerialCheckerTool.jar">
+        <element id="module-output" name="Switch Serial Checker Tool" />
+      </element>
+    </root>
+  </artifact>
+</component>
