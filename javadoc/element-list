@@ -1,0 +1,4 @@
+com.switchcheck
+com.switchcheck.SerialInformationComposite
+com.switchcheck.SerialModelState
+com.switchcheck.SerialPatchFactory

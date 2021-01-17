@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.switchcheck"},{"l":"com.switchcheck.SerialInformationComposite"},{"l":"com.switchcheck.SerialModelState"},{"l":"com.switchcheck.SerialPatchFactory"}];updateSearchResults();
