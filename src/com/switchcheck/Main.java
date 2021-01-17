@@ -14,6 +14,7 @@ public class Main {
 
     /**
      * This is just for restarting for wrong inputs
+     * @author Allen Royce Aleta
      */
     public static void startPick(){
         Scanner scan = new Scanner(System.in);
@@ -38,6 +39,7 @@ public class Main {
      * This picks between 3 options
      * each option uses a different design pattern
      * The (now a comment) return statement was just for testing
+     * @author Allen Royce Aleta
      * @param i This accepts [1, 2, then every other int]
      */
     public static void pick(int i) {
@@ -59,6 +61,7 @@ public class Main {
     /**
      * Asks the user for the Switch Unit's Serial Number
      * this also has attribute "numbers" in the code.
+     * @author Allen Royce Aleta
      * @return returns the serial number
      */
     public static String serialInput() {
@@ -109,6 +112,7 @@ public class Main {
     /**
      * This is the Main Method.
      * This shows the user 3 options, then calls startPick() to start asking the user to choose.
+     * @author Allen Royce Aleta
      * @param args (the usual)
      */
     public static void main(String[] args) {

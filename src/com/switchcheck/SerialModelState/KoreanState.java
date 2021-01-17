@@ -3,6 +3,7 @@ package com.switchcheck.SerialModelState;
 /**
  * A concrete class implementing State interface
  * (sets Origin state to 'Korea')
+ * @author Allen Royce Aleta
  */
 public class KoreanState implements StateInterface {
     public void doAction(SwitchContext context){

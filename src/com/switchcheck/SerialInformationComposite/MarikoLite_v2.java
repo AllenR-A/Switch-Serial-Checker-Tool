@@ -4,6 +4,7 @@ package com.switchcheck.SerialInformationComposite;
  * A Leaf Node in Composite Pattern Design
  * where each leaf is a type of Switch.
  * (has 5 attributes set with a constructor)
+ * @author Allen Royce Aleta
  */
 public class MarikoLite_v2 implements SwitchCompositeInterface {
     String version;

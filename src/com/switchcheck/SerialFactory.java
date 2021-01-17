@@ -8,10 +8,12 @@ import static com.switchcheck.EristaPatchCheck.patchCheck;
 /**
  * This tells the user whether their system is patched or not.
  * This uses Factory Design Pattern
+ * @author Allen Royce Aleta
  */
 public class SerialFactory {
     /**
      * SwitchSerialFactory() will act like main() in Factory Design Pattern
+     * @author Allen Royce Aleta
      * @param serial Takes in a serial number of the format "XXX00000000000" | 3 Letters & 11 Numbers
      * @return This returns a String message
      */

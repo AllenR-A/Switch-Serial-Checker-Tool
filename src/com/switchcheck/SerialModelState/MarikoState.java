@@ -3,6 +3,7 @@ package com.switchcheck.SerialModelState;
 /**
  * A concrete class implementing State interface
  * (sets Origin state to 'Mariko')
+ * @author Allen Royce Aleta
  */
 public class MarikoState implements StateInterface {
     public void doAction(SwitchContext context){

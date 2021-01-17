@@ -4,6 +4,7 @@ public class EristaPatchCheck {
     /**
      * Takes in the assemblyline "X00" & number which appears after the assemblyline in the serial
      * Then uses those 2 to determine if it's patched or not.
+     * @author Allen Royce Aleta w/ help from excel sheets on GBAtemp, & other websites.
      * @param assemblyLine Takes in a String in the format "X00" but only reads "X"
      * @param number a 9-character String interpreted as a 9-digit int
      * @return  "Unpatched", "Maybe", "Patched", or "Korean" (for those unknown korean units)

@@ -3,6 +3,7 @@ package com.switchcheck.SerialInformationComposite;
 /**
  * The interface in Composite Pattern Design.
  * Implemented by leaves (models) & SwitchComposite
+ * @author Allen Royce Aleta
  */
 public interface SwitchCompositeInterface {
     String getVersion();

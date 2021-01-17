@@ -6,6 +6,7 @@ import com.switchcheck.EristaPatchCheck;
  * A Leaf Node in Composite Pattern Design
  * where each leaf is a type of Switch.
  * (has 5 attributes set with a constructor)
+ * @author Allen Royce Aleta
  */
 public class Erista_v1 implements SwitchCompositeInterface {
     String version;
@@ -63,6 +64,7 @@ public class Erista_v1 implements SwitchCompositeInterface {
     /**
      * This version of getHackability() first calls EristaPatchCheck's patchCheck() method
      * to check the assembly line & number & see if it's unpatched, maybe patched, patched, or see if it's the unknown korea version.
+     * @author Allen Royce Aleta
      * @return a message (which changes depending on whether it's patched or not)
      */
     @Override

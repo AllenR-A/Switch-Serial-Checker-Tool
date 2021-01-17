@@ -5,6 +5,7 @@ import com.switchcheck.SerialInformationComposite.*;
 /**
  * This tells the user whether their system is patched or not + other information.
  * This uses Composite Design Pattern.
+ * @author Allen Royce Aleta
  */
 public class SerialComposite {
     /**
@@ -15,6 +16,7 @@ public class SerialComposite {
      *
      * empty return statement is at the end to make this compile
      *
+     * @author Allen Royce Aleta
      * @param serial Takes in a serial number of the format "XXX00000000000" | 3 Letters & 11 Numbers
      * @return This returns a String message
      */

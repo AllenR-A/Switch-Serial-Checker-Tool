@@ -2,11 +2,9 @@ package com.switchcheck.SerialPatchFactory;
 
 /**
  * This is the "Might-be-patched-since-it's-refurbished" Erista (v1) object
+ * @author Allen Royce Aleta
  */
 public class Refurbished_v1 implements SwitchFactoryInterface {
-    /**
-     * @return a text block of information
-     */
     public String inform(){
         return """
                 

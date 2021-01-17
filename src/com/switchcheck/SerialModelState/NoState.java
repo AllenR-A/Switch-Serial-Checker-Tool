@@ -3,6 +3,7 @@ package com.switchcheck.SerialModelState;
 /**
  * A concrete class implementing State interface
  * (sets Refurbished state to 'No')
+ * @author Allen Royce Aleta
  */
 public class NoState implements StateInterface {
     public void doAction(SwitchContext context){

@@ -2,8 +2,9 @@ package com.switchcheck.SerialModelState;
 
 /**
  * The 'Context' in State Pattern Design
- * which uses the State interface to set/get
+ * which uses the State interface to set/get private attributes. (encapsulation)
  * it's 6 attributes, which is then printed by the SerialState class
+ * @author Allen Royce Aleta
  */
 public class SwitchContext {
     private StateInterface version;

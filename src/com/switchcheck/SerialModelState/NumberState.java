@@ -4,7 +4,8 @@ import com.switchcheck.SerialState;
 
 /**
  * A concrete class implementing State interface
- * (sets Number state to the input)
+ * (sets Number state to SerialState.numberState string)
+ * @author Allen Royce Aleta
  */
 public class NumberState implements StateInterface {
     String string = SerialState.numberState;

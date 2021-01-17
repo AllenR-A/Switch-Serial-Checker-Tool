@@ -4,6 +4,7 @@ import com.switchcheck.SerialModelState.*;
 /**
  * This tells the user other info about their system.
  * This uses State Design Pattern
+ * @author Allen Royce Aleta
  */
 public class SerialState {
     public static String serialState;
@@ -13,6 +14,7 @@ public class SerialState {
     /**
      * SwitchSerialState() will act like main() in State Design Pattern
      * (this uses nested if...else, since, it has to)
+     * @author Allen Royce Aleta
      * @param serial Takes in a serial number of the format "XXX00000000000" | 3 Letters & 11 Numbers
      * @return This returns a String message
      */

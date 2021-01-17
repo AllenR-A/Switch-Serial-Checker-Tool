@@ -6,6 +6,7 @@ import java.util.List;
 /**
  * The Composite in Composite Pattern Design
  * (the one adding, removing leaves)
+ * @author Allen Royce Aleta
  */
 public class SwitchComposite implements SwitchCompositeInterface {
 

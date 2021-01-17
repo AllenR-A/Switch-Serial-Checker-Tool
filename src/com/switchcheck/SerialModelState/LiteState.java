@@ -3,6 +3,7 @@ package com.switchcheck.SerialModelState;
 /**
  * A concrete class implementing State interface
  * (sets Version state to 'Lite')
+ * @author Allen Royce Aleta
  */
 public class LiteState implements StateInterface {
     public void doAction(SwitchContext context){

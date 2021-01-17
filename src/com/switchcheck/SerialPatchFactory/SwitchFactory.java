@@ -6,8 +6,14 @@ package com.switchcheck.SerialPatchFactory;
  *
  * This Factory would generate objects
  * (the models & whether they're patched or not)
+ * @author Allen Royce Aleta
  */
 public class SwitchFactory {
+    /**
+     * @author Allen Royce Aleta
+     * @param switchModel Takes in a switch model in String
+     * @return an object (a corresponding switch model)
+     */
     public SwitchFactoryInterface getSwitch(String switchModel){
         return switch (switchModel) {
             case "Erista-Unpatched" -> new UnpatchedErista_v1();

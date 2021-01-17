@@ -2,11 +2,9 @@ package com.switchcheck.SerialPatchFactory;
 
 /**
  * This is the Patched Mariko Lite-version (v2) object
+ * @author Allen Royce Aleta
  */
 public class PatchedMarikoLite_v2 implements SwitchFactoryInterface {
-    /**
-     * @return a text block of information
-     */
     public String inform(){
         return """
                 
